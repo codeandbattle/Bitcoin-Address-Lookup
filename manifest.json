@@ -1,9 +1,9 @@
 {
-    "name": "Bitcoin Address Lookup",
-    "version": "0.2",
-    "manifest_version": 2,
+    "name": "Bitcoin Cash Address Lookup",
+    "version": "0.1",
+    "manifest_version": 1,
 
-    "description": "Lookup Bitcoin addresses from context menu.",
+    "description": "Lookup Bitcoin Cash addresses from context menu.",
     "icons": {
 	"16": "images/bitcoin-16.png",
 	"48": "images/bitcoin-48.png",
