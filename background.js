@@ -23,10 +23,10 @@ function parseBitcoinURL(url) {
 
 /* Open address info page in new tab. */
 function openAddressInfo(address) {
-    chrome.tabs.create({ url: 'https://blockchain.info/address/'+encodeURIComponent(address) });
+    chrome.tabs.create({ url: 'https://bch.btc.com/'+encodeURIComponent(address) });
 }
 
-var lookupItemId = chrome.contextMenus.create({title: 'Lookup Bitcoin address',
+var lookupItemId = chrome.contextMenus.create({title: 'Lookup Bitcoin Cash address',
 					       contexts: ['link', 'selection'],
 					       id: 'lookup-address',
 					       targetUrlPatterns: ['bitcoin:*']});
@@ -38,7 +38,7 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
 	} else if (info.linkUrl) {
 	    var parsed = parseBitcoinURL(info.linkUrl);
 	    if (parsed) openAddressInfo(parsed.address);
-	    else window.alert('Invalid Bitcoin address!');
+	    else window.alert('Invalid Bitcoin Cash address!');
 	}
     }
 });
